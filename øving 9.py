@@ -5,7 +5,7 @@
 #b. Et sted (streng)
 #c. Et starttidspunkt (datetime objekt, se hint nederst)
 #d. En varighet i minutter (int)
-
+import (datetime)
 
 class Avtale: #a
     def __init__(self, tittel,sted, starttidspunkt=0, varighet=0):
@@ -20,7 +20,7 @@ class Avtale: #a
 
 
     def __str__(self):
-        return f"Navn :{self.tittel}, Sted: {self.sted}, Starttidspunkt: {self.starttidspunkt}, Varighet: {self.varighet}"
+        return f"Navn :{self.tittel}, Sted: {self.sted}, Starttidspunkt: {self.starttidspunkt}, Varighet: {self.varighet}, tema {self.tema}"
 #f) Lag en funksjon som lar brukeren skrive inn en ny avtale. Funksjonen skal bruke input-
 #funksjonen til å lese inn egenskapene til avtalen og skal sjekke at det brukeren skriver er
 #gyldig, for eksempel at varighet er et tall. Funksjonen skal returnere et avtale-objekt
@@ -28,11 +28,33 @@ class Avtale: #a
     def ny_avtale (self): #f
         while True:
             try:
-                avtale = float(input("skriv inn avtale 1:"))
+                tittel = input("skriv inn ny avtale:"))
                 break
             except:
-                print("ikke gyldig input prøv på nytt")
+                print("ikke gyldig avtale prøv på nytt")
+            try:
+                sted = input("skriv inn ny avtale:"))
+                break
+            except:
+                print("ikke gyldig avtale prøv på nytt")
+            try:
+                starttidspunkt = int(input("skriv inn ny avtale:"))
+                break
+            except:
+                print("ikke gyldig avtale prøv på nytt")
+            try:
+                varighet = int(input("skriv inn ny avtale:"))
+                break
+            except:
+                print("ikke gyldig avtale prøv på nytt")
+            try:
+                tema = input("skriv inn ny avtale:"))
+                break
+            except:
+                print("ikke gyldig avtale prøv på nytt")
 
+
+        return nyavtale
 
 
 
