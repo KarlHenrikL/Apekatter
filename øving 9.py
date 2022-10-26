@@ -28,9 +28,11 @@ class Avtale: #a
     def ny_avtale (self): #f
         while True:
             try:
-                avtale = float(input("skriv inn retning 1:"))
+                avtale = float(input("skriv inn avtale 1:"))
                 break
             except:
                 print("ikke gyldig input prøv på nytt")
+
+
 
 
