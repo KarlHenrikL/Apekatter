@@ -5,9 +5,9 @@
 #b. Et sted (streng)
 #c. Et starttidspunkt (datetime objekt, se hint nederst)
 #d. En varighet i minutter (int)
-import (datetime)
 
-class Avtale: #d
+
+class Avtale: #a
     def __init__(self, tittel,sted, starttidspunkt=0, varighet=0):
         self.tittel = tittel
         self.sted = sted
@@ -32,3 +32,7 @@ class Avtale: #d
                 break
             except:
                 print("ikke gyldig input prøv på nytt")
+
+
+    def __str__(self):
+        return f"Navn :{self.tittel}, Sted: {self.sted}, Starttidspunkt: {self.starttidspunkt}, Varighet: {self.varighet}"
