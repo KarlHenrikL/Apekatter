@@ -14,4 +14,5 @@ class Avtale: #a
         self.starttidspunkt = starttidspunkt
         self.varighet = varighet
 
-print('Eg skal donkikonga Astror')
+    def __str__(self):
+        return f"Navn :{self.tittel}, Sted: {self.sted}, Starttidspunkt: {self.starttidspunkt}, Varighet: {self.varighet}"
