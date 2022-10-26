@@ -14,4 +14,4 @@ class Avtale: #a
         self.starttidspunkt = starttidspunkt
         self.varighet = varighet
 
-        hello
+print('Eg skal donkikonga Astror')
