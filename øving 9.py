@@ -47,6 +47,10 @@ class Avtale: #a
 
         return ny_avtale
 
+#g) Lag en funksjon som skriver ut ei liste med avtaler til skjermen. Funksjonen skal minimum
+#skrive ut indeksen til avtalen i lista og tittel til avtalen. Den kan alternativt skrive ut indeksen
+#til avtalen og så hele avtalen som definert i __str__ metoden. Funksjonen skal ha en frivillig
+#parameter «overskrift» som skal være en overskrift som funksjonen skriver ut før avtalene i
+#lista. Funksjonen skal inkludere indeksen til hver avtale i utskriften.
 
-
-
+    def listemedavtaler
