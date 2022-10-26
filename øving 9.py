@@ -26,35 +26,26 @@ class Avtale: #a
 #gyldig, for eksempel at varighet er et tall. Funksjonen skal returnere et avtale-objekt
 
     def ny_avtale (self): #f
-        while True:
+       while True:
             try:
-                tittel = input("skriv inn ny avtale:"))
-                break
-            except:
-                print("ikke gyldig avtale prøv på nytt")
-            try:
-                sted = input("skriv inn ny avtale:"))
-                break
-            except:
-                print("ikke gyldig avtale prøv på nytt")
-            try:
-                starttidspunkt = int(input("skriv inn ny avtale:"))
-                break
-            except:
-                print("ikke gyldig avtale prøv på nytt")
-            try:
-                varighet = int(input("skriv inn ny avtale:"))
-                break
-            except:
-                print("ikke gyldig avtale prøv på nytt")
-            try:
-                tema = input("skriv inn ny avtale:"))
-                break
+                tittel = input("skriv inn ny tittel:"))
+
+                sted = input("skriv inn ny sted:"))
+
+                starttidspunkt = int(input("skriv inn ny starttidspunkt:"))
+
+                varighet = int(input("skriv inn ny varighet:"))
+
+                tema = input("skriv inn ny tema:"))
+
             except:
                 print("ikke gyldig avtale prøv på nytt")
 
+            else:
+                break
 
-        return nyavtale
+
+        return ny_avtale
 
 
 
