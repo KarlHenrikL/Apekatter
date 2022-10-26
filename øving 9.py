@@ -18,9 +18,9 @@ class Avtale: #a
 #setning slik at du får skrevet ut avtalen med alle egenskapene til avtalen på et leselig format
 #for brukeren.
 
-    def __str__(self):  # e
-        return f"tittel :{self.tittel}, sted: {self.sted}, starttidspunkt: {self.starttidspunkt},varighet: {varighet} "
 
+    def __str__(self):
+        return f"Navn :{self.tittel}, Sted: {self.sted}, Starttidspunkt: {self.starttidspunkt}, Varighet: {self.varighet}"
 #f) Lag en funksjon som lar brukeren skrive inn en ny avtale. Funksjonen skal bruke input-
 #funksjonen til å lese inn egenskapene til avtalen og skal sjekke at det brukeren skriver er
 #gyldig, for eksempel at varighet er et tall. Funksjonen skal returnere et avtale-objekt
@@ -34,5 +34,3 @@ class Avtale: #a
                 print("ikke gyldig input prøv på nytt")
 
 
-    def __str__(self):
-        return f"Navn :{self.tittel}, Sted: {self.sted}, Starttidspunkt: {self.starttidspunkt}, Varighet: {self.varighet}"
