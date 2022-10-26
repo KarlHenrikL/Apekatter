@@ -1,4 +1,4 @@
-
+#hei
 
 #d) Lag en klasse for en avtale. En avtale skal minimum ha:
 #a. En tittel som sier hva denne avtalen er (streng)
