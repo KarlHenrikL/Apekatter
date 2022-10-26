@@ -48,5 +48,10 @@ class Avtale: #a
         return ny_avtale
 
 
+#h) Lag en funksjon som lagrer ei liste med avtaler til ei tekstfil. 
+# Tenk over hva som vil være et fornuftig format for ei slik tekstfil. 
+
+
+print('astor e gay')
 
 
