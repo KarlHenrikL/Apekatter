@@ -1,11 +1,8 @@
 
 
-#d) Lag en klasse for en avtale. En avtale skal minimum ha:
-#a. En tittel som sier hva denne avtalen er (streng)
-#b. Et sted (streng)
-#c. Et starttidspunkt (datetime objekt, se hint nederst)
-#d. En varighet i minutter (int)
 import (datetime)
+
+liste= []
 
 class Avtale: #a
     def __init__(self, tittel,sted, starttidspunkt=0, varighet=0):
@@ -14,16 +11,10 @@ class Avtale: #a
         self.starttidspunkt = starttidspunkt
         self.varighet = varighet
 
-#e) Lag en __str__ metode for avtaler som returnerer en streng som kan skrives ut med en print-
-#setning slik at du får skrevet ut avtalen med alle egenskapene til avtalen på et leselig format
-#for brukeren.
-
 
     def __str__(self):
         return f"Navn :{self.tittel}, Sted: {self.sted}, Starttidspunkt: {self.starttidspunkt}, Varighet: {self.varighet}, tema {self.tema}"
-#f) Lag en funksjon som lar brukeren skrive inn en ny avtale. Funksjonen skal bruke input-
-#funksjonen til å lese inn egenskapene til avtalen og skal sjekke at det brukeren skriver er
-#gyldig, for eksempel at varighet er et tall. Funksjonen skal returnere et avtale-objekt
+
 
     def ny_avtale (self): #f
        while True:
@@ -53,4 +44,17 @@ class Avtale: #a
 #parameter «overskrift» som skal være en overskrift som funksjonen skriver ut før avtalene i
 #lista. Funksjonen skal inkludere indeksen til hver avtale i utskriften.
 
-    def listemedavtaler
+    def listemedavtaler(liste, overskrift "avtaler"): #g
+        for i, value in enumerate(liste):
+            print (i, value)
+
+def ListeAvAvtaleValg()
+    print (f"Hva er ønsket handling?")
+    print (f"For ny avtale: 1")
+    print (f"For å se avtale: 2")
+    print (f"For endring av avtale: 3")
+    print (f"For sletting av avtale: 4")
+    valg = (int(input(f"Valg : ")))
+
+
+
