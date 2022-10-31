@@ -48,13 +48,13 @@ class Avtale: #a
         for i, value in enumerate(liste):
             print (i, value)
 
-def ListeAvAvtaleValg()
-    print (f"Hva er ønsket handling?")
-    print (f"For ny avtale: 1")
-    print (f"For å se avtale: 2")
-    print (f"For endring av avtale: 3")
-    print (f"For sletting av avtale: 4")
-    valg = (int(input(f"Valg : ")))
-
+    def ListeAvAvtaleValg()
+        print (f"Hva er ønsket handling?")
+        print (f"For ny avtale: 1")
+        print (f"For å se avtale: 2")
+        print (f"For endring av avtale: 3")
+        print (f"For sletting av avtale: 4")
+        valg = (int(input(f"Valg : ")))
+        return valg
 
 
