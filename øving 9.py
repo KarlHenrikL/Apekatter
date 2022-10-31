@@ -37,6 +37,7 @@ class Avtale: #a
 
 
         return ny_avtale
+if __name__ == "__main__":
 
 #g) Lag en funksjon som skriver ut ei liste med avtaler til skjermen. Funksjonen skal minimum
 #skrive ut indeksen til avtalen i lista og tittel til avtalen. Den kan alternativt skrive ut indeksen
@@ -49,12 +50,16 @@ class Avtale: #a
             print (i, value)
     return liste
     def ListeAvAvtaleValg()
-        print (f"Hva er ønsket handling?")
-        print (f"For ny avtale: 1")
-        print (f"For å se avtale: 2")
-        print (f"For endring av avtale: 3")
-        print (f"For sletting av avtale: 4")
-        valg = (int(input(f"Valg : ")))
-        return valg
+        #print (f"Hva er ønsket handling?")
+        #print (f"For ny avtale: 1")
+        #print (f"For å se avtale: 2")
+        #print (f"For endring av avtale: 3")
+        #print (f"For sletting av avtale: 4")
+        #valg = (int(input(f"Valg : ")))
+       # return valg
+
+#k) Lag en funksjon som tar inn ei liste med avtaler og en streng, og returnerer ei liste med alle
+#avtaler hvor tittelen inneholder strengen. Dere kan bruke find-metoden for strenger til å
+#finne en delstreng i en større streng.
 
 
