@@ -76,3 +76,9 @@ print(myFile.read())
 #j)Lag en funksjon som tar inn ei liste med avtaler og en dato og returnerer ei liste med alle 
 #avtalene som foregår på denne datoen. Funksjonen trenger bare å sjekke om datoen 
 #stemmer med dato-delen av starttidspunktet til avtalen. 
+
+    def redigereAvtale(): #n
+        fila = open("avtaler.txt", "r")
+        """for linje in fila:
+            variabler = linje.split(;)
+        """
