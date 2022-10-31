@@ -1,4 +1,4 @@
-
+#sondre er gay
 
 import (datetime)
 
