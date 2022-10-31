@@ -47,7 +47,7 @@ class Avtale: #a
     def listemedavtaler(liste, overskrift "avtaler"): #g
         for i, value in enumerate(liste):
             print (i, value)
-
+    return liste
     def ListeAvAvtaleValg()
         print (f"Hva er ønsket handling?")
         print (f"For ny avtale: 1")
