@@ -58,8 +58,21 @@ if __name__ == "__main__":
         #valg = (int(input(f"Valg : ")))
        # return valg
 
-#k) Lag en funksjon som tar inn ei liste med avtaler og en streng, og returnerer ei liste med alle
-#avtaler hvor tittelen inneholder strengen. Dere kan bruke find-metoden for strenger til å
-#finne en delstreng i en større streng.
+#h)Lag en funksjon som lagrer ei liste med avtaler til ei tekstfil. Tenk over hva som vil være et 
+#fornuftig format for ei slik tekstfil.
+
+    def list_avtale():
+myFile = open('avtale.txt', 'w')
+myDict = {'Roll': 4, 'Name': 'Joel', 'Language': 'Golang'}
+myFile.write(str(myDict))
+myFile.close()
+myFile = open('avtale.txt', 'r')
+print(myFile.read())
+
+#i)Lag en funksjon som leser inn ei liste med avtaler fra ei tekstfil på samme format som dere 
+#definerte for funksjonen som skriver fila med avtaler. 
 
 
+#j)Lag en funksjon som tar inn ei liste med avtaler og en dato og returnerer ei liste med alle 
+#avtalene som foregår på denne datoen. Funksjonen trenger bare å sjekke om datoen 
+#stemmer med dato-delen av starttidspunktet til avtalen. 
