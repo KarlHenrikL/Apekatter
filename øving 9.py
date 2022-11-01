@@ -60,25 +60,59 @@ if __name__ == "__main__":
 
 #h)Lag en funksjon som lagrer ei liste med avtaler til ei tekstfil. Tenk over hva som vil være et 
 #fornuftig format for ei slik tekstfil.
+def _lagAvtale():
+    avtaleListe.append(lagAvtale())
 
-    def list_avtale():
-myFile = open('avtale.txt', 'w')
-myDict = {'Roll': 4, 'Name': 'Joel', 'Language': 'Golang'}
-myFile.write(str(myDict))
-myFile.close()
-myFile = open('avtale.txt', 'r')
-print(myFile.read())
+def lagAvtale():
+    print("Du skriver nå en ny avtale:")
+    return Avtale(input("Tittel: "),input("Sted: "),trydate("Dato (yyyy-mm-dd): "), trytime("Tid (hh:mm): "),tryint("Varighet (minutter): "),input('Personer: ').split(','))
+
 
 #i)Lag en funksjon som leser inn ei liste med avtaler fra ei tekstfil på samme format som dere 
 #definerte for funksjonen som skriver fila med avtaler. 
-
+def velgAvtale():
+    if(len(avtaleListe)==0): return -1
+    try:
+        i= int(input(f"Velg en avtale [0-{len(avtaleListe)-1}]: "))
+    except:
+        return velgAvtale("Angitt verdi ikke gjenkjent som heltall. Prøv igjen: ")
+    if(i<0):
+        return 0
+    if(i>=len(avtaleListe)):
+        return len(avtaleListe)-1
+    return i
 
 #j)Lag en funksjon som tar inn ei liste med avtaler og en dato og returnerer ei liste med alle 
 #avtalene som foregår på denne datoen. Funksjonen trenger bare å sjekke om datoen 
 #stemmer med dato-delen av starttidspunktet til avtalen. 
 
-    def redigereAvtale(): #n
-        fila = open("avtaler.txt", "r")
-        """for linje in fila:
-            variabler = linje.split(;)
-        """
+def _endreAvtale(i=-1):
+    if i==-1: i=velgAvtale()
+    if i==-1: return
+    p=[
+       f"Tittel: {avtaleListe[i].tittel}",
+       f"Sted: {avtaleListe[i].sted}",
+       f"Dato: {avtaleListe[i].dato}",
+       f"Tid: {avtaleListe[i].tid}",
+       f"Varighet: {avtaleListe[i].varighet}min",
+       f"Personer: {avtaleListe[i].personerStreng()}",
+       "Lagre og gå ut"
+       ]
+    for j in range(len(p)):
+        print(str(j+1)+" "+p[j])
+    j=int(input("Endre eller gå ut [1-7]: "))-1
+    
+    if j==0:
+        avtaleListe[i].tittel=input("Ny tittel: ")
+    elif j==1:
+        avtaleListe[i].sted=input("Nytt sted: ")
+    elif j==2:
+        avtaleListe[i].date=trydate("Ny dato [yyyy-: ")
+    elif j==3:
+        avtaleListe[i].date=trydate("Ny tid [hh:mm]: ")
+    elif j==4:
+        avtaleListe[i].varighet=tryint("Ny varighet: ")
+    elif j==5:
+        avtaleListe[i].personer=input("Nye personer: ").split(',')
+    
+    if not j==6: _endreAvtale(i)
