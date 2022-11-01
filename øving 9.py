@@ -11,7 +11,33 @@ class Avtale: #a
         self.starttidspunkt = starttidspunkt
         self.varighet = varighet
 
-
+    def hovedmeny(start):
+        while start == 1:
+            print("1: Les inn avtaler fra fil")
+            print("2: Skriv avtalene til fil")
+            print("3: Skriv inn en ny avtale")
+            print("4: Skriv ut alle avtalene")
+            print("5: Slette en avtale")
+            print("6: Redigere en avtale")
+            print("0: Jeg vil avslutte")
+            valg = int(input("velg et alternativ: "))
+            if valg == 1:
+                avtaler_fra_fil()
+            elif valg == 2:
+                avtaler_til_fil()
+            elif valg == 3:
+                ny_avtale()
+            elif valg == 4:
+                skriv_ut_alle_avtaler()
+            elif valg == 5:
+                slette_avtale()
+            elif valg == 6:
+                redigere_avtale()
+            elif valg == 7:
+                exit
+            else:
+                print("Ugyldig svar, vennligst bruk 1-6")
+        return hovedmeny(1)
     def __str__(self):
         return f"Navn :{self.tittel}, Sted: {self.sted}, Starttidspunkt: {self.starttidspunkt}, Varighet: {self.varighet}, tema {self.tema}"
 
@@ -49,14 +75,7 @@ if __name__ == "__main__":
         for i, value in enumerate(liste):
             print (i, value)
     return liste
-    def ListeAvAvtaleValg()
-        #print (f"Hva er ønsket handling?")
-        #print (f"For ny avtale: 1")
-        #print (f"For å se avtale: 2")
-        #print (f"For endring av avtale: 3")
-        #print (f"For sletting av avtale: 4")
-        #valg = (int(input(f"Valg : ")))
-       # return valg
+
 
 #h)Lag en funksjon som lagrer ei liste med avtaler til ei tekstfil. Tenk over hva som vil være et 
 #fornuftig format for ei slik tekstfil.
@@ -67,7 +86,7 @@ def lagAvtale():
     print("Du skriver nå en ny avtale:")
     return Avtale(input("Tittel: "),input("Sted: "),trydate("Dato (yyyy-mm-dd): "), trytime("Tid (hh:mm): "),tryint("Varighet (minutter): "),input('Personer: ').split(','))
 
-
+#append() insert() variabel.extend(det man vil legge til).
 #i)Lag en funksjon som leser inn ei liste med avtaler fra ei tekstfil på samme format som dere 
 #definerte for funksjonen som skriver fila med avtaler. 
 def velgAvtale():
