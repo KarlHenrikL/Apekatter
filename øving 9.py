@@ -105,7 +105,7 @@ def velgAvtale():
 #avtalene som foregår på denne datoen. Funksjonen trenger bare å sjekke om datoen 
 #stemmer med dato-delen av starttidspunktet til avtalen. 
 
-def _endreAvtale(i=-1):
+def _endreAvtale(i=-1): #n
     if i==-1: i=velgAvtale()
     if i==-1: return
     p=[
